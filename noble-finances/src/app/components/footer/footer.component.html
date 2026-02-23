@@ -1,0 +1,34 @@
+<footer class="footer-root" [ngClass]="{ 'footer-variant-a': variant === 'book', 'footer-variant-b': variant === 'home' }">
+  <div
+    class="footer-top container-xl d-flex justify-content-between align-items-center gap-3"
+    [ngClass]="{
+      'px-4': variant === 'book',
+      'px-3': variant === 'home',
+      'top-layout-center': variant === 'book'
+    }"
+  >
+    <p class="brand">Noble Finances</p>
+    <nav class="d-flex align-items-center gap-3">
+      <a [routerLink]="[navLink]">{{ navLabel }}</a>
+      <button type="button" class="light-btn btn rounded-pill" [routerLink]="[buttonLink]">
+        {{ buttonLabel }}
+      </button>
+    </nav>
+  </div>
+
+  <div
+    class="footer-bottom container-xl d-flex justify-content-between gap-3"
+    [ngClass]="{
+      'px-4': variant === 'book',
+      'px-3': variant === 'home',
+      'align-items-end': variant === 'book',
+      'align-items-center mt-4': variant === 'home'
+    }"
+  >
+    <p>
+      {{ copyLine1 }}<br />
+      {{ copyLine2 }}
+    </p>
+    <p>{{ copyright }}</p>
+  </div>
+</footer>
