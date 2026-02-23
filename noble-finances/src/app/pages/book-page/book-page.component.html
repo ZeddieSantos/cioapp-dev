@@ -1,0 +1,25 @@
+<div class="book-page-shell">
+  <section class="book-hero-wrap">
+    <app-header />
+
+    <section class="book-hero container-xl px-4 py-5">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6">
+          <div class="clock-panel">
+            <img [src]="images.clock" alt="Wall clock representing available booking time" />
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-copy">
+            <h1>Book an<br />appointment now</h1>
+            <p>Serving individuals and small businesses since 1987</p>
+            <button type="button" class="dark-btn btn rounded-pill" [routerLink]="['/']">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <app-footer />
+</div>
