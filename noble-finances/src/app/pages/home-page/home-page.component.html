@@ -1,12 +1,6 @@
 <div class="page-shell pb-1">
   <section class="hero-wrap">
-    <header class="top-nav container-fluid px-4 py-3 d-flex justify-content-between align-items-center">
-      <p class="brand">Noble Finances</p>
-      <nav class="d-flex align-items-center gap-3">
-        <a [routerLink]="['/services']">Services</a>
-        <button type="button" class="primary-btn btn rounded-pill">Book an appointment</button>
-      </nav>
-    </header>
+    <app-header variant="home" navLink="/book" buttonLink="/book" />
 
     <div class="hero container-xl px-3 py-5">
       <div class="hero-grid row g-4 align-items-center">
@@ -27,7 +21,7 @@
     <p class="eyebrow">Services</p>
     <h2>Let us handle the numbers,<br />so you can handle your success.</h2>
     <p class="caption my-3">Serving individuals and small businesses since 1987</p>
-    <button type="button" class="dark-btn btn rounded-pill" [routerLink]="['/services']">
+    <button type="button" class="dark-btn btn rounded-pill" [routerLink]="['/book']">
       Schedule a consult
     </button>
   </section>
@@ -126,22 +120,13 @@
     <button type="button" class="dark-btn btn rounded-pill">Connect with our experts</button>
   </section>
 
-  <footer class="site-footer">
-    <div
-      class="footer-top container-xl px-3 d-flex justify-content-between align-items-center gap-3"
-    >
-      <p class="brand">Noble Finances</p>
-      <nav class="d-flex align-items-center gap-3">
-        <a [routerLink]="['/services']">Services</a>
-        <button type="button" class="light-btn btn rounded-pill">Book an appointment</button>
-      </nav>
-    </div>
-
-    <div
-      class="footer-bottom container-xl px-3 mt-4 d-flex justify-content-between align-items-center gap-3"
-    >
-      <p>Financial Clarity You Can Trust<br />Trusted financial guidance since 1987</p>
-      <p>© 2026 All rights reserved</p>
-    </div>
-  </footer>
+  <app-footer
+    variant="home"
+    navLink="/book"
+    buttonLink="/book"
+    buttonLabel="Book an appointment"
+    copyLine1="Financial Clarity You Can Trust"
+    copyLine2="Trusted financial guidance since 1987"
+    copyright="© 2026 All rights reserved"
+  />
 </div>
