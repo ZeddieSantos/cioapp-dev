@@ -1,0 +1,99 @@
+<div class="services-shell pb-1">
+  <section class="hero-wrap">
+    <header class="top-nav container-fluid px-4 py-3 d-flex justify-content-between align-items-center">
+      <p class="brand mb-0">Noble Finances</p>
+      <nav class="d-flex align-items-center gap-3">
+        <a [routerLink]="['/services']">Services</a>
+        <button type="button" class="dark-btn btn rounded-pill">Book an appointment</button>
+      </nav>
+    </header>
+
+    <div class="hero container-xl px-3 py-5">
+      <div class="row g-4 align-items-center">
+        <article class="col-lg-6">
+          <h1>Your Financial Journey, Clearly Defined</h1>
+          <p>Trusted financial guidance for every stage of life and business since 1987</p>
+          <button type="button" class="dark-btn btn rounded-pill">Connect with our experts</button>
+        </article>
+
+        <div class="col-lg-6 text-center text-lg-end">
+          <img [src]="images.hero" alt="Laptop and coins representing digital financial services" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="city-banner">
+    <img [src]="images.city" alt="Skyscrapers from a city center" />
+  </section>
+
+  <section class="onboarding container-xl px-3 py-5">
+    <p class="eyebrow">How it works</p>
+    <h2>A simple onboarding</h2>
+    <p class="caption">Serving individuals and small businesses since 1987</p>
+
+    <div class="step-list mt-4">
+      @for (step of steps; track step.order) {
+        <article class="step-card row g-4 align-items-center">
+          <p class="order col-md-2 mb-0">{{ step.order }}</p>
+
+          <div class="col-md-5">
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.description }}</p>
+          </div>
+
+          <div class="col-md-5 text-md-end">
+            <div class="image-slot d-inline-flex align-items-center justify-content-center">
+              <img [src]="step.imageUrl" [alt]="step.imageAlt" />
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="beliefs py-5">
+    <div class="container-xl px-3">
+      <p class="eyebrow text-center">Philosophy</p>
+      <h2 class="text-center">We believe:</h2>
+
+      <div class="belief-grid mt-4 d-grid gap-3">
+        @for (belief of beliefs; track belief.order) {
+          <article class="belief-card text-center">
+            <p class="order">{{ belief.order }}</p>
+            <p class="mb-0">{{ belief.description }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section container-xl px-3 py-5">
+    <div class="row g-4 align-items-center">
+      <article class="col-lg-6">
+        <h2>Say goodbye to taxes of the past</h2>
+        <button type="button" class="dark-btn btn rounded-pill mt-3">Connect with our experts</button>
+      </article>
+
+      <div class="col-lg-6 text-center text-lg-end">
+        <div class="cta-image-slot d-inline-flex align-items-center justify-content-center">
+          <img [src]="images.cta" alt="Calculator representing reliable tax planning" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container-xl px-3 d-flex justify-content-between align-items-center gap-3 py-3">
+      <p class="brand mb-0">Noble Finances</p>
+      <nav class="d-flex align-items-center gap-3">
+        <a [routerLink]="['/']">Home</a>
+        <button type="button" class="light-btn btn rounded-pill">Book an appointment</button>
+      </nav>
+    </div>
+    <div class="container-xl px-3 d-flex justify-content-between align-items-end gap-3 py-4 small-print">
+      <p class="mb-0">Financial Clarity You Can Trust<br />Trusted financial guidance since 1987</p>
+      <p class="mb-0">© 2026 All rights reserved</p>
+    </div>
+  </footer>
+</div>

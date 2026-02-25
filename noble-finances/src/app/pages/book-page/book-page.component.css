@@ -1,0 +1,96 @@
+:host {
+  display: block;
+  color: #274726;
+}
+
+.book-page-shell {
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: #bdeec9;
+  color: #274726;
+}
+
+.book-hero-wrap {
+  background: #bdeec9;
+}
+
+.container-xl {
+  max-width: 1240px;
+}
+
+.dark-btn,
+.light-btn {
+  border: 0;
+  font-size: clamp(0.7rem, 1.05vw, 0.77rem);
+  padding: 0.5rem 1rem;
+}
+
+.dark-btn {
+  background: #244d20;
+  color: #f4fff5;
+}
+
+.light-btn {
+  background: #f4fff5;
+  color: #244d20;
+}
+
+.book-hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+}
+
+.clock-panel {
+  background: #8fdfaf;
+  border-radius: 20px;
+  min-height: 500px;
+  max-width: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.clock-panel img {
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2.45rem, 5.7vw, 4.85rem);
+  font-weight: 500;
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+}
+
+.hero-copy p {
+  margin: 0.95rem 0 1.7rem;
+  font-size: clamp(0.78rem, 1.15vw, 0.9rem);
+}
+
+.hero-copy {
+  max-width: 460px;
+}
+
+@media (max-width: 991px) {
+  .book-hero {
+    min-height: auto;
+  }
+
+  .clock-panel {
+    min-height: 380px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-copy h1 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+}

@@ -1,0 +1,17 @@
+<header
+  class="header-root container-fluid px-4 py-3 d-flex justify-content-between align-items-center"
+  [ngClass]="{ 'header-variant-a': variant === 'book', 'header-variant-b': variant === 'home' }"
+>
+  <p class="brand">Noble Finances</p>
+  <nav class="d-flex align-items-center gap-3">
+    <a [routerLink]="[navLink]">{{ navLabel }}</a>
+    <button
+      type="button"
+      class="btn rounded-pill"
+      [routerLink]="[buttonLink]"
+      [ngClass]="{ 'dark-btn': variant === 'book', 'primary-btn': variant === 'home' }"
+    >
+      {{ buttonLabel }}
+    </button>
+  </nav>
+</header>
