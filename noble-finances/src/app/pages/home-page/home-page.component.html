@@ -1,0 +1,147 @@
+<div class="page-shell pb-1">
+  <section class="hero-wrap">
+    <header class="top-nav container-fluid px-4 py-3 d-flex justify-content-between align-items-center">
+      <p class="brand">Noble Finances</p>
+      <nav class="d-flex align-items-center gap-3">
+        <a [routerLink]="['/services']">Services</a>
+        <button type="button" class="primary-btn btn rounded-pill">Book an appointment</button>
+      </nav>
+    </header>
+
+    <div class="hero container-xl px-3 py-5">
+      <div class="hero-grid row g-4 align-items-center">
+        <div class="hero-copy col-lg">
+          <h1>Financial Clarity You<br />Can Trust</h1>
+          <p>Trusted financial guidance for every stage of life and business since 1987</p>
+          <button type="button" class="dark-btn btn rounded-pill">Connect with our experts</button>
+        </div>
+
+        <div class="col-lg-6 text-center text-lg-end">
+          <img [src]="images.hero" alt="Globe and connected points for global finance" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-intro container-xl px-3 text-center pt-5 pb-4 mb-4" id="services">
+    <p class="eyebrow">Services</p>
+    <h2>Let us handle the numbers,<br />so you can handle your success.</h2>
+    <p class="caption my-3">Serving individuals and small businesses since 1987</p>
+    <button type="button" class="dark-btn btn rounded-pill" [routerLink]="['/services']">
+      Schedule a consult
+    </button>
+  </section>
+
+  <section class="service-list container-xl px-3 d-grid gap-3 mb-4">
+    @for (service of services; track service.title) {
+      <article
+        class="service-card d-flex flex-column flex-lg-row align-items-center gap-4"
+        [class.flex-lg-row-reverse]="service.reverse"
+      >
+        <img [src]="service.imageUrl" [alt]="service.imageAlt" />
+
+        <div class="service-content flex-grow-1">
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+          <div class="chip-row d-flex flex-wrap gap-2">
+            @for (chip of service.chips; track chip) {
+              <span>{{ chip }}</span>
+            }
+          </div>
+        </div>
+      </article>
+    }
+  </section>
+
+  <section class="testimonials container-xl px-3 pt-4 pb-5 mb-4">
+    <h2 class="mb-4">Hear From Our Happy Clients</h2>
+    <div class="testimonial-grid row g-4">
+      <aside class="col-lg-3">
+        <button type="button" class="selected-role btn w-100 text-start">
+          Graphic Designer
+          <small>Atlanta, Georgia</small>
+        </button>
+        <p>Commercial Photographer<br /><small>Dallas, Texas</small></p>
+        <p>Stylist<br /><small>Austin, Texas</small></p>
+      </aside>
+
+      <div class="quote-block col-lg-9">
+        <blockquote>
+          "Managing my taxes as a freelancer used to be overwhelming,
+          but Noble Finance made it effortless."
+        </blockquote>
+        <div class="author d-flex align-items-center gap-2">
+          <img [src]="images.testimonialProfile" alt="Client profile" />
+          <p>Taylor M., 28 years old</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="banner mb-4">
+    <img [src]="images.laptopBanner" alt="Person typing on laptop" />
+  </section>
+
+  <section class="audience-section container-xl px-3 py-4 mb-4">
+    <div class="audience-heading row g-3">
+      <h2 class="col-lg-6">Smart Finance for everyone</h2>
+      <p class="col-lg-6 align-self-center mb-0">
+        At Noble Finance, we believe that financial confidence should be accessible to
+        everyone—whether you are a solo entrepreneur, managing a growing family, or
+        running a small business.
+      </p>
+    </div>
+
+    <div class="audience-grid row row-cols-1 row-cols-lg-3 mt-4 g-0">
+      @for (audience of audiences; track audience.title) {
+        <article class="col">
+          <h3>{{ audience.title }}</h3>
+          <p>{{ audience.description }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="plan-section container-xl px-3 row g-4 mb-4">
+    <article class="plan-copy col-lg-6 d-flex flex-column justify-content-center h-100">
+      <h2>A custom built plan for you</h2>
+      <p class="my-3">
+        At Noble Finances, we know that tax filing should be seamless, accurate, and
+        stress-free. Book now and connect our team key player simplicity, precision,
+        and reliability.
+      </p>
+      <button type="button" class="light-btn btn rounded-pill">Learn More</button>
+    </article>
+
+    <div class="col-lg-6">
+      <img [src]="images.planCard" alt="Wooden steps representing growth" />
+    </div>
+  </section>
+
+  <section class="closing-cta container-xl px-3 text-center py-5 mb-4">
+    <h2>
+      We believe that tax filing should be seamless, accurate, and stress-free. Get
+      started with Noble Finance today!
+    </h2>
+    <button type="button" class="dark-btn btn rounded-pill">Connect with our experts</button>
+  </section>
+
+  <footer class="site-footer">
+    <div
+      class="footer-top container-xl px-3 d-flex justify-content-between align-items-center gap-3"
+    >
+      <p class="brand">Noble Finances</p>
+      <nav class="d-flex align-items-center gap-3">
+        <a [routerLink]="['/services']">Services</a>
+        <button type="button" class="light-btn btn rounded-pill">Book an appointment</button>
+      </nav>
+    </div>
+
+    <div
+      class="footer-bottom container-xl px-3 mt-4 d-flex justify-content-between align-items-center gap-3"
+    >
+      <p>Financial Clarity You Can Trust<br />Trusted financial guidance since 1987</p>
+      <p>© 2026 All rights reserved</p>
+    </div>
+  </footer>
+</div>
